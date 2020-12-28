@@ -1,0 +1,236 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000002a9b978, pid=5568, tid=0x0000000000001470
+#
+# JRE version: OpenJDK Runtime Environment (8.0) (build 1.8.0-adoptopenjdk-_2018_05_19_00_59-b00)
+# Java VM: OpenJDK 64-Bit Server VM (25.71-b00 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# J 64 C2 java.lang.String.indexOf(II)I (70 bytes) @ 0x0000000002a9b978 [0x0000000002a9b8a0+0xd8]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002498000):  JavaThread "main" [_thread_in_Java, id=5232, stack(0x0000000002870000,0x0000000002970000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x00000000ffffffff, RBX=0x0000000000000031, RCX=0x000000000000002e, RDX=0x000000000000007c
+RSP=0x000000000296eda0, RBP=0x000000000000007f, RSI=0x00000000eb63f7a8, RDI=0x0000000000000043
+R8 =0x0000000000000000, R9 =0x000000000000007d, R10=0x000000000000006a, R11=0x00000000eb63f7c0
+R12=0x0000000000000000, R13=0x000000000296ee50, R14=0x000000000296eeb0, R15=0x0000000002498000
+RIP=0x0000000002a9b978, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000000296eda0)
+0x000000000296eda0:   000000000296ee00 0000000002977920
+0x000000000296edb0:   0000000000000002 000000000000005c
+0x000000000296edc0:   000000000296edc0 000000005497de9e
+0x000000000296edd0:   000000000296ee98 0000000002a9ae94
+0x000000000296ede0:   0000000000000000 000000005497dec0
+0x000000000296edf0:   0000000000000000 000000000296ee30
+0x000000000296ee00:   000000000296ee88 0000000002977ac0
+0x000000000296ee10:   000000000000003a 0000000000000043
+0x000000000296ee20:   00000000eb63f678 000000000000005c
+0x000000000296ee30:   000000000296ee98 0000000002977850
+0x000000000296ee40:   000000000296ee98 0000000002977850
+0x000000000296ee50:   00000000eb63f678 000000000296ee58
+0x000000000296ee60:   00000000548a6411 000000000296eeb0
+0x000000000296ee70:   000000005497b5b0 0000000000000000
+0x000000000296ee80:   00000000548a6438 000000000296ee50
+0x000000000296ee90:   000000000296eeb0 000000000296eef8 
+
+Instructions: (pc=0x0000000002a9b978)
+0x0000000002a9b958:   3c 43 0f b7 4c 53 14 41 3b c8 74 36 47 0f b7 54
+0x0000000002a9b968:   53 16 45 3b d0 74 31 41 83 c1 04 44 3b ca 7c c8
+0x0000000002a9b978:   44 3b cd 7d 2a 66 66 90 47 0f b7 54 4b 10 45 3b
+0x0000000002a9b988:   d0 74 19 41 ff c1 44 3b cd 7c ed eb 12 41 ff c1 
+
+
+Register to memory mapping:
+
+RAX=0x00000000ffffffff is an unallocated location in the heap
+RBX=0x0000000000000031 is an unknown value
+RCX=0x000000000000002e is an unknown value
+RDX=0x000000000000007c is an unknown value
+RSP=0x000000000296eda0 is pointing into the stack for thread: 0x0000000002498000
+RBP=0x000000000000007f is an unknown value
+RSI=0x00000000eb63f7a8 is an oop
+java.lang.String 
+ - klass: 'java/lang/String'
+RDI=0x0000000000000043 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x000000000000007d is an unknown value
+R10=0x000000000000006a is an unknown value
+R11=0x00000000eb63f7c0 is an oop
+[C 
+ - klass: {type array char}
+ - length: 127
+R12=0x0000000000000000 is an unknown value
+R13=0x000000000296ee50 is pointing into the stack for thread: 0x0000000002498000
+R14=0x000000000296eeb0 is pointing into the stack for thread: 0x0000000002498000
+R15=0x0000000002498000 is a thread
+
+
+Stack: [0x0000000002870000,0x0000000002970000],  sp=0x000000000296eda0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x0000000002a9b978
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000562a4000 JavaThread "Service Thread" daemon [_thread_blocked, id=4548, stack(0x0000000056ea0000,0x0000000056fa0000)]
+  0x000000005628f800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=6116, stack(0x0000000056ad0000,0x0000000056bd0000)]
+  0x000000005628c800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=1676, stack(0x0000000056c00000,0x0000000056d00000)]
+  0x0000000056232800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1640, stack(0x0000000056990000,0x0000000056a90000)]
+  0x0000000055215800 JavaThread "Attach Listener" daemon [_thread_blocked, id=1948, stack(0x00000000567f0000,0x00000000568f0000)]
+  0x0000000055214000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2052, stack(0x00000000566b0000,0x00000000567b0000)]
+  0x00000000551fd000 JavaThread "Finalizer" daemon [_thread_blocked, id=3400, stack(0x0000000056000000,0x0000000056100000)]
+  0x00000000551b6000 JavaThread "Reference Handler" daemon [_thread_blocked, id=1740, stack(0x0000000056130000,0x0000000056230000)]
+=>0x0000000002498000 JavaThread "main" [_thread_in_Java, id=5232, stack(0x0000000002870000,0x0000000002970000)]
+
+Other Threads:
+  0x00000000551ae800 VMThread [stack: 0x0000000055f00000,0x0000000056000000] [id=5428]
+  0x00000000562a5000 WatcherThread [stack: 0x0000000056fc0000,0x00000000570c0000] [id=5380]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 18944K, used 4609K [0x00000000eb200000, 0x00000000ec700000, 0x0000000100000000)
+  eden space 16384K, 28% used [0x00000000eb200000,0x00000000eb680770,0x00000000ec200000)
+  from space 2560K, 0% used [0x00000000ec480000,0x00000000ec480000,0x00000000ec700000)
+  to   space 2560K, 0% used [0x00000000ec200000,0x00000000ec200000,0x00000000ec480000)
+ ParOldGen       total 44032K, used 0K [0x00000000c1600000, 0x00000000c4100000, 0x00000000eb200000)
+  object space 44032K, 0% used [0x00000000c1600000,0x00000000c1600000,0x00000000c4100000)
+ Metaspace       used 3269K, capacity 4728K, committed 4864K, reserved 1056768K
+  class space    used 350K, capacity 424K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x0000000011d30000,0x0000000011f30000] byte_map_base: 0x0000000011725000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006bcbbe50
+ Begin Bits: [0x00000000126d0000, 0x0000000013678000)
+ End Bits:   [0x0000000013678000, 0x0000000014620000)
+
+Polling page: 0x0000000000240000
+
+CodeCache: size=245760Kb used=1318Kb max_used=1332Kb free=244441Kb
+ bounds [0x0000000002970000, 0x0000000002be0000, 0x0000000011970000]
+ total_blobs=374 nmethods=134 adapters=154
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.831 Thread 0x000000005628f800 nmethod 130 0x0000000002ab6ed0 code [0x0000000002ab7040, 0x0000000002ab72e8]
+Event: 0.831 Thread 0x000000005628f800  131       3       java.util.LinkedHashMap$LinkedHashIterator::nextNode (54 bytes)
+Event: 0.832 Thread 0x000000005628f800 nmethod 131 0x0000000002ab7390 code [0x0000000002ab7520, 0x0000000002ab7818]
+Event: 0.832 Thread 0x000000005628f800  132       3       java.io.File::getName (42 bytes)
+Event: 0.832 Thread 0x000000005628f800 nmethod 132 0x0000000002ab7990 code [0x0000000002ab7b20, 0x0000000002ab7fe8]
+Event: 0.832 Thread 0x000000005628f800  134       3       java.util.regex.ASCII::isType (15 bytes)
+Event: 0.832 Thread 0x000000005628f800 nmethod 134 0x0000000002ab8190 code [0x0000000002ab8300, 0x0000000002ab8570]
+Event: 0.832 Thread 0x000000005628f800  133       1       org.gradle.internal.installation.GradleInstallation::getLibDirs (5 bytes)
+Event: 0.832 Thread 0x000000005628f800 nmethod 133 0x0000000002ab8690 code [0x0000000002ab87e0, 0x0000000002ab88f0]
+Event: 0.833 Thread 0x000000005628c800 nmethod 129% 0x0000000002abc150 code [0x0000000002abc2e0, 0x0000000002abceb8]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.277 Thread 0x0000000002498000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000eb207cb0) thrown at [C:\Users\jenkins\workspace\openjdk8_build_x86-64_windows\openjdk\hots
+Event: 0.277 Thread 0x0000000002498000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000eb207f98) thrown at [C:\Users\jenkins\workspace\openjdk8_build_x86-64_windows\openjdk\hotspot\src\share\vm\p
+
+Events (10 events):
+Event: 0.800 loading class java/util/regex/Pattern$CharProperty$1
+Event: 0.800 loading class java/util/regex/Pattern$CharProperty$1 done
+Event: 0.800 loading class java/util/regex/Pattern$GroupTail
+Event: 0.800 loading class java/util/regex/Pattern$GroupTail done
+Event: 0.800 loading class java/util/regex/Pattern$BitClass
+Event: 0.800 loading class java/util/regex/Pattern$BitClass done
+Event: 0.800 loading class java/util/regex/Pattern$1
+Event: 0.800 loading class java/util/regex/Pattern$1 done
+Event: 0.800 loading class java/util/regex/Pattern$5
+Event: 0.800 loading class java/util/regex/Pattern$5 done
+
+
+Dynamic libraries:
+0x000000013fc20000 - 0x000000013fc55000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\bin\java.exe
+0x0000000077830000 - 0x00000000779d9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077710000 - 0x000000007782f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd830000 - 0x000007fefd89c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefebb0000 - 0x000007fefec8b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefdbf0000 - 0x000007fefdc8f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefde10000 - 0x000007fefde2f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe160000 - 0x000007fefe28d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077610000 - 0x000000007770a000 	C:\Windows\system32\USER32.dll
+0x000007fefea90000 - 0x000007fefeaf7000 	C:\Windows\system32\GDI32.dll
+0x000007feffb30000 - 0x000007feffb3e000 	C:\Windows\system32\LPK.dll
+0x000007fefe090000 - 0x000007fefe159000 	C:\Windows\system32\USP10.dll
+0x000007fefc800000 - 0x000007fefc9f4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdf60000 - 0x000007fefdfd1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefec90000 - 0x000007fefecbe000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe6a0000 - 0x000007fefe7a9000 	C:\Windows\system32\MSCTF.dll
+0x000007fefd750000 - 0x000007fefd780000 	C:\Windows\system32\nvinitx.dll
+0x000007fefd740000 - 0x000007fefd74c000 	C:\Windows\system32\VERSION.dll
+0x0000000074180000 - 0x0000000074186000 	C:\Program Files\NVIDIA Corporation\CoProcManager\detoured.dll
+0x000007fefb6e0000 - 0x000007fefb718000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefe2b0000 - 0x000007fefe487000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefda10000 - 0x000007fefda46000 	C:\Windows\system32\CFGMGR32.dll
+0x000007feffa50000 - 0x000007feffb27000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe490000 - 0x000007fefe693000 	C:\Windows\system32\ole32.dll
+0x000007fefda50000 - 0x000007fefda6a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fefb6b0000 - 0x000007fefb6d4000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x0000000072940000 - 0x0000000072a12000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\msvcr100.dll
+0x000000006b4f0000 - 0x000000006bd39000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\server\jvm.dll
+0x000007fef0290000 - 0x000007fef0299000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefeb00000 - 0x000007fefeb4d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe080000 - 0x000007fefe088000 	C:\Windows\system32\NSI.dll
+0x000007fefaf70000 - 0x000007fefafab000 	C:\Windows\system32\WINMM.dll
+0x00000000779f0000 - 0x00000000779f7000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef4a60000 - 0x000007fef4a6f000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\verify.dll
+0x000007fee5f00000 - 0x000007fee5f29000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\java.dll
+0x000007fee5f40000 - 0x000007fee5f56000 	C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\zip.dll
+0x000007fefecc0000 - 0x000007feffa48000 	C:\Windows\system32\SHELL32.dll
+0x000007fefd780000 - 0x000007fefd78f000 	C:\Windows\system32\profapi.dll
+0x000007fef52b0000 - 0x000007fef53d5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: org.gradle.launcher.GradleMain -Dorg.gradle.jvmargs=-Xmx4096m --stop
+java_class_path (initial): C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\Tools\gradle\lib\gradle-launcher-5.6.4.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Program Files\Dell\DW WLAN Card;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\;D:\App\Microsoft VS Code\bin;C:\adb;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;D:\App\nodejs\;C:\Program Files\Git\cmd;D:\App\Microsoft VS Code\bin;C:\Program Files\Unity\Hub\Editor\2019.2.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\platform-tools;C:\Program Files\Java\jdk-13.0.2\bin;C:\Users\JDZ\AppData\Roaming\npm;C:\Users\JDZ\.dotnet\tools;C:\Users\JDZ\AppData\Local\GitHubDesktop\bin
+USERNAME=JDZ
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.17617)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 4103480k(660040k free), swap 8205116k(2839772k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.71-b00) for windows-amd64 JRE (1.8.0-adoptopenjdk-_2018_05_19_00_59-b00), built on May 19 2018 01:02:12 by "jenkins" with MS VC++ 10.0 (VS2010)
+
+time: Thu Dec 24 10:42:14 2020
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
